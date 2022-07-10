@@ -10,6 +10,8 @@ namespace MyThreads
     class Program
     {
         private Resource res = new Resource();
+
+        private object lockObj = new object();
         static void Main(string[] args)
         {
 
