@@ -14,16 +14,16 @@ namespace MyThreads
         private object lockObj = new object();
         static void Main(string[] args)
         {
+            var taskFactory = new TaskFactory(new System.Threading.Tasks.Schedulers.LimitedConcurrencyLevelTaskScheduler())
 
-
-            Thread.CurrentThread.Name = "Main";
-
-            var p = new Program();
-            var work = new Thread(p.ThreadEntry);
-            work.Name = "Worker";
-            work.Start();
-            p.ThreadEntry();
-            Console.ReadLine();
+            // Thread.CurrentThread.Name = "Main";
+            //
+            // var p = new Program();
+            // var work = new Thread(p.ThreadEntry);
+            // work.Name = "Worker";
+            // work.Start();
+            // p.ThreadEntry();
+            // Console.ReadLine();
         }
 
 
